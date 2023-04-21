@@ -4,6 +4,7 @@ body {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center 30%;
+   background-attachment: fixed;
    margin: auto;
 }
 
@@ -16,3 +17,19 @@ header ul li {
    
 }
 header ul li:hover {font-size: large; color: rgb(132, 115, 228);    font-weight: 700;}
+
+
+/* fix */
+
+
+::-webkit-scrollbar {
+   width: 5px;
+ }
+ ::-webkit-scrollbar-track {
+   background: #e9c77e;
+   border-radius: 50px;
+ }
+ ::-webkit-scrollbar-thumb {
+   background: #b64e4e;
+   border-radius: 50px;
+  }

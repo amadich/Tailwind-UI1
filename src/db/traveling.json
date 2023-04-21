@@ -1,0 +1,23 @@
+[
+   {
+      "title": "B A I L , Paris",
+      "prix": "$5 / P A X",
+      "disc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "img": "https://cdn.leonardo.ai/users/bb27b05a-9b79-4969-9278-9573df5e6da8/generations/4aa43752-07ff-4bb0-8a87-a3c96e49af43/Vintage_Style_Photography_magnificent_sunset_over_the_Notre_Da_1.jpg"
+   },
+
+   {
+      "title": "B A I L , Indonesia",
+      "prix": "$3 / P A X",
+      "disc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "img": "https://www.tripmedaddy.com/wp-content/uploads/2022/04/indonesia.jpg"
+   },
+
+
+   {
+      "title": "B A I L , Australia",
+      "prix": "$2 / P A X",
+      "disc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "img": "https://content.api.news/v3/images/bin/6020617cdbb97d62a0c56f392d5adfde"
+   }
+]
