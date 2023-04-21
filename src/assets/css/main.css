@@ -1,0 +1,18 @@
+body {
+   background-color: #1f2b1f;
+   background-image: url(../mountains-with-cloudy-sky-surface.jpg) ;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center 30%;
+   margin: auto;
+}
+
+header ul li {
+   margin: 1rem;
+   font-size: large;
+   color: antiquewhite;
+   cursor: pointer;
+   transition: 0.2s;
+   
+}
+header ul li:hover {font-size: large; color: rgb(132, 115, 228);    font-weight: 700;}
