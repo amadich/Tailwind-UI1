@@ -41,6 +41,6 @@ app.listen(PORT, () => {console.log(`Connecting in : ${PORT}`);})
 And Other Folders /Models & /public/Uploads
 
 Models : - Accunets.js <br>
-         - Login.js <br>
-         - Rejester.js <br>
-         - Uploadimg.js <br>
+         /t- Login.js <br>
+         /t- Rejester.js <br>
+         /t- Uploadimg.js <br>
