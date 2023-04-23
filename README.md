@@ -113,3 +113,27 @@ const Login = (app) => {
 module.exports = Login;
 
 ```
+
+# Whats The ok = 0 ; ok = 1 in Login.js?
+
+in React Login Componente
+```js
+Axios.post(`${serverURL}/login`, {email,pwd})
+         .then((response) => {
+               if (response.data.ok != 0) {
+                  setCookie("acc_tokens",response.data.token);
+                  window.localStorage.setItem("token", response.data.token);
+                  window.localStorage.setItem("user", response.data.Accunet.user);
+                  window.localStorage.setItem("email", response.data.Accunet.email);
+                  window.localStorage.setItem("img", response.data.Accunet.img);
+                  console.log(response.data);
+
+                  window.location.href = "/";
+               }
+
+               else {
+                  console.log(response.data);
+               }
+         })
+```
+### if Accunet Not found No Cookies Saveing For Fix The errors
