@@ -10,7 +10,7 @@ Create a beautiful page with tailwind 🍐
 
 ![image](https://user-images.githubusercontent.com/74735976/233863282-2ad3303a-18c7-4523-82bd-7d1648c7f28a.png)
 
-# Server Folder 
+# Server File 
 ```js
 const express = require("express");
 const app = express();
@@ -38,3 +38,9 @@ Login(app);
 // 
 app.listen(PORT, () => {console.log(`Connecting in : ${PORT}`);})
 ```
+And Other Folders /Models & /public/Uploads
+
+Models : - Accunets.js 
+         - Login.js
+         - Rejester.js
+         - Uploadimg.js
