@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Scroll from "./Scroll";
-
+import {useCookies} from 'react-cookie';
 function Article() {
+   const [cookie,setCookie] = useCookies(["acc_tokens"])
    return ( 
       <>
             <article className="mt-60">
@@ -13,7 +14,7 @@ function Article() {
                </h4>
 
                <div className="m-10">
-                  <Link to="/login"><button className="backdrop-blur-lg bg-slate-400 rounded-lg w-52 hover:w-60 h-12 text-xl hover:bg-orange-400 duration-300 font-medium">  Set The Date  </button></Link>
+                  <Link to={cookie.acc_tokens ? null : "/login"}><button className="backdrop-blur-lg bg-slate-400 rounded-lg w-52 hover:w-60 h-12 text-xl hover:bg-orange-400 duration-300 font-medium">  Set The Date  </button></Link>
                </div>
 
             </article>
