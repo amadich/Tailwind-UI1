@@ -44,3 +44,40 @@ Models : <br>- Accunets.js <br>
          - Login.js <br>
          - Rejester.js <br>
          - Uploadimg.js <br>
+
+# For Upload Image model 
+Install Multer
+```cmd
+npm i multer
+```
+
+# In Folder /Models/Uploadimg.js
+```js
+
+const multer = require("multer");
+
+const Uploadimg = (app) => {
+   const storage = multer.diskStorage({
+      destination : (req,file,cb) => {
+         cb(null,'public/Uploads/');
+      },
+      filename: (req,file,cb) => {
+         const nameF = Date.now() + "-" + file.originalname;
+         cb(null,nameF);
+      }
+   })
+
+   const upload = multer({storage:storage});
+
+   app.post('/upload', upload.single('file'), function(req, res) {
+      // Retrieve the name of the uploaded file and send it back in the response
+      const uploadedFile = req.file;
+      const fileName = uploadedFile.filename;
+      res.json({ fileName });
+    });
+
+
+}
+module.exports = Uploadimg;
+
+```
