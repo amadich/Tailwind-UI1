@@ -81,3 +81,35 @@ const Uploadimg = (app) => {
 module.exports = Uploadimg;
 
 ```
+
+# in Folder /models/Login.js
+
+```js
+
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const Accunetmodel = require("./Accunets");
+const Login = (app) => {
+   app.post("/login", async (req,res) => {
+         
+
+      try {
+         const {email,pwd} = req.body;
+         const Accunet = await Accunetmodel.findOne({email});
+         !Accunet && res.json({msgerr: "Accunet Not Found !",ok:0});
+
+         const checkpwd = await bcrypt.compare(pwd,Accunet.pwd);
+         !checkpwd && res.json({msgerr: "Email Or Password incorrect ! ",ok:0});
+
+         const token = jwt.sign({UserID : Accunet._id},"shhh");
+         res.json({token,Accunet,ok:1})
+
+      } catch (error) {
+         console.log(error);
+      }
+
+   })
+}
+module.exports = Login;
+
+```
